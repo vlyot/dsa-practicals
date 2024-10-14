@@ -9,5 +9,5 @@ private:
     double InterestRate;
 public:
     SavingsAccount(double b, double IR);
-    double calculateInterest(SavingsAccount a);
+    double calculateInterest()const;
 };

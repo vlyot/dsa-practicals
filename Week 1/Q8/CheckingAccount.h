@@ -8,6 +8,6 @@ protected:
     double Charge;
 public:
     CheckingAccount(double b, double c);
-    double credit(double amt, Account a) override;  
-    double debit(double amt, Account a) override; 
+    double credit(double amt) override;  
+    double debit(double amt) override; 
 };

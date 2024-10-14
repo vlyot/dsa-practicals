@@ -8,9 +8,9 @@ protected:
     double balance;
 public:
     Account(double b);
-    double virtual credit(double amt, Account a);
-    double virtual debit(double amt,Account a);
-    double getbalance(Account a);
+    double virtual credit(double amt);
+    double virtual debit(double amt);
+    double getbalance()const;
 };
 
 

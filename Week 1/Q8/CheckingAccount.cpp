@@ -9,12 +9,12 @@ CheckingAccount::CheckingAccount(double b, double c):Account(b){
     this->Charge = c;
 }
 
-double CheckingAccount::credit(double amt, Account a) {
+double CheckingAccount::credit(double amt) {
     balance += amt;
     balance -= Charge;  
     return balance;
 }
-double CheckingAccount::debit(double amt, Account a){
+double CheckingAccount::debit(double amt){
     if (amt + Charge > balance) {
     cout << "Debit amount plus charge exceeded account balance." << endl;
     return balance;

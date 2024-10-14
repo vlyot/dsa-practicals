@@ -14,19 +14,22 @@ Account::Account(double b){
 }
 
 
-double Account::credit(double amt, Account a){
-    a.balance+=amt;
+double Account::credit(double amt){
+    balance+=amt;
     cout<<"$"<<amt<<" added to balance"<<endl;
+    return this->balance;
 };
-double Account::debit(double amt,Account a){
-    if(amt < a.balance){
-        a.balance-=amt;
+double Account::debit(double amt){
+    if(amt < balance){
+        balance-=amt;
         cout<<"$"<<amt<<" removed from balance"<<endl;
     }
     else{
         cout<<"Debit amount exceeded account balance"<<endl;
     }
+return this->balance;
 };
-double Account::getbalance(Account a){
-    cout<<"Current balance: "<<a.balance<<endl;
+double Account::getbalance()const{
+    cout<<"Current balance: "<<balance<<endl;
+    return this->balance;
 };

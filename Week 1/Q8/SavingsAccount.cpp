@@ -9,6 +9,6 @@ SavingsAccount::SavingsAccount(double b, double IR): Account(b){
     this->InterestRate = IR;
 }
 
-double SavingsAccount::calculateInterest(SavingsAccount a){
-    return (a.balance*a.InterestRate);
+double SavingsAccount::calculateInterest()const{
+    return (balance*InterestRate);
 }
