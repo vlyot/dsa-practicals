@@ -8,7 +8,15 @@
     "compare": "cpp",
     "limits": "cpp",
     "type_traits": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "array": "cpp",
+    "format": "cpp",
+    "istream": "cpp",
+    "tuple": "cpp",
+    "utility": "cpp",
+    "variant": "cpp",
+    "new": "cpp",
+    "stdexcept": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
