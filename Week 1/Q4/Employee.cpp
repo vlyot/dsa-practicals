@@ -14,10 +14,18 @@ Employee::Employee(string firstName, string lastName, int monthlySalary) {
 string Employee::get_fName() {
     return firstName;
 }
+// Setter for first name
+void Employee::set_fName(string firstName) {
+    this->firstName = firstName;
+}
 
 // Getter for last name
 string Employee::get_lName() {
     return lastName;
+}
+// Setter for last name
+void Employee::set_lName(string lastName) {
+    this->lastName = lastName;
 }
 
 // Getter for monthly salary

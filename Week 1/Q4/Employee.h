@@ -18,6 +18,9 @@ public:
 
     // Setter method for salary
     void set_salary(int salary);
+        // Setter methods
+    void set_fName(string firstName);
+    void set_lName(string lastName);
 
 private:
     string firstName;
