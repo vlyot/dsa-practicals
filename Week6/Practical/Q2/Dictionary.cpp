@@ -34,12 +34,26 @@ Dictionary::~Dictionary(){
 		    return -1;
     }
 
-int Dictionary::hash(KeyType key) {
-    int intKey = 0;
-    for (char a : key) {
-        intKey += charvalue(a);
+int Dictionary::charvalue(char c){
+    if (isalpha(c)) {
+        if (isupper(c))
+            return (int)c - (int) 'A';       // A-Z: 0-25
+        else
+            return (int)c - (int) 'a' + 26;  // a-z: 26-51
+    } else {
+        return -1;
     }
-    return intKey % MAX_SIZE;
+}
+
+int Dictionary::hash(KeyType key) {
+    int hash_value = 0;
+    for (char a : key) {
+        int char_val = charvalue(a);
+        if (char_val >= 0) {
+            hash_value = (hash_value * 52 + char_val) % MAX_SIZE; // Horner's rule
+        }
+    }
+    return hash_value;
 }
 
 
