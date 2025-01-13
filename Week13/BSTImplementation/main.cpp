@@ -15,6 +15,7 @@ int main() {
     bst.inorder();
 
     cout << "Search 40: " << (bst.search(40) ? "Found" : "Not Found") << endl;
+    
 
     cout << "Remove 50" << endl;
     bst.remove(50);
